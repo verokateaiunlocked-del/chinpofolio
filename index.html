@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chin Carine W. Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#1a1a1a',
+                            secondary: '#4a4a4a',
+                            accent: '#8b7355',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #fdfdfb;
+        }
+        .text-balance {
+            text-wrap: balance;
+        }
+        [x-cloak] { display: none !important; }
+        
+        /* Simple Fade-in animation for section reveals */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-brand-primary" x-data="{ isScrolled: false }" @scroll.window="isScrolled = (window.pageYOffset > 20)">
+
+    <nav :class="isScrolled ? 'bg-white/80 backdrop-blur-md py-4 shadow-sm' : 'bg-transparent py-6'" 
+         class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="font-serif text-xl font-bold tracking-tight">Chin Carine W.</a>
+            <div class="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest text-brand-secondary">
+                <a href="#about" class="hover:text-brand-accent transition-colors">About</a>
+                <a href="#expertise" class="hover:text-brand-accent transition-colors">Expertise</a>
+                <a href="#experience" class="hover:text-brand-accent transition-colors">Experience</a>
+                <a href="#ventures" class="hover:text-brand-accent transition-colors">Ventures</a>
+                <a href="#contact" class="hover:text-brand-accent transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.JM70wFbh5og0CbKektuMewHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" 
+                 alt="Cover" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white reveal visible">
+            <span class="inline-block text-sm uppercase tracking-[0.3em] font-semibold mb-6 opacity-90">
+                Executive Operations & Program Coordination Specialist
+            </span>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-8">
+                Chin Carine W.
+            </h1>
+            <p class="text-xl md:text-2xl font-light max-w-3xl mx-auto mb-12 opacity-90 leading-relaxed text-balance">
+                Structuring systems. Aligning execution. Delivering operational clarity across complex environments.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#experience" class="px-8 py-4 bg-white text-brand-primary font-semibold hover:bg-brand-accent hover:text-white transition-all duration-300 flex items-center justify-center gap-2 group">
+                    View Experience <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="#experience" class="px-8 py-4 border border-white text-white font-semibold hover:bg-white hover:text-brand-primary transition-all duration-300">
+                    View Impact
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 animate-bounce text-center">
+            <div class="w-px h-12 bg-white/30 mx-auto mb-2"></div>
+            <span class="text-[10px] uppercase tracking-widest">Scroll</span>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row gap-16 items-center">
+            <div class="w-full md:w-1/2">
+                <span class="text-brand-accent font-semibold tracking-widest uppercase text-xs mb-4 block">About</span>
+                <h2 class="font-serif text-4xl md:text-5xl mb-8 leading-tight">
+                    A systems-oriented approach to leadership.
+                </h2>
+            </div>
+            <div class="w-full md:w-1/2 space-y-6 text-brand-secondary leading-relaxed text-lg">
+                <p>With over 15 years of experience supporting multi-stakeholder programs, Chin Carine designs structured systems that improve coordination, strengthen accountability, and enable consistent execution across diverse operational environments.</p>
+                <p>Chin Carine W. is an operations and program coordination specialist with experience supporting structured execution in multi-stakeholder and donor-aligned environments.</p>
+                <p>She works at the intersection of strategy and execution, designing practical systems that improve visibility, coordination, and decision-making across programs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise" class="py-24 bg-[#f9f9f7]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16 reveal">
+                <span class="text-brand-accent font-semibold tracking-widest uppercase text-xs mb-4 block">Capabilities</span>
+                <h2 class="font-serif text-4xl font-bold">Core Expertise Areas</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 border border-neutral-100 group hover:border-brand-accent transition-all duration-300 reveal">
+                    <div class="w-12 h-12 bg-neutral-50 mb-6 flex items-center justify-center group-hover:bg-brand-accent group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="settings" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-4">Program & Operations Coordination</h3>
+                    <p class="text-brand-secondary text-sm leading-relaxed">Structuring and managing workflows that support effective program delivery across multiple stakeholders and environments.</p>
+                </div>
+                <div class="bg-white p-8 border border-neutral-100 group hover:border-brand-accent transition-all duration-300 reveal">
+                    <div class="w-12 h-12 bg-neutral-50 mb-6 flex items-center justify-center group-hover:bg-brand-accent group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-4">Stakeholder Alignment & Support</h3>
+                    <p class="text-brand-secondary text-sm leading-relaxed">Facilitating coordination between teams, partners, and leadership to ensure clarity, cohesion, and shared execution goals.</p>
+                </div>
+                <div class="bg-white p-8 border border-neutral-100 group hover:border-brand-accent transition-all duration-300 reveal">
+                    <div class="w-12 h-12 bg-neutral-50 mb-6 flex items-center justify-center group-hover:bg-brand-accent group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="clipboard-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-4">Compliance & Reporting Systems</h3>
+                    <p class="text-brand-secondary text-sm leading-relaxed">Designing and maintaining structured reporting processes that ensure accountability, transparency, and alignment with required standards.</p>
+                </div>
+                <div class="bg-white p-8 border border-neutral-100 group hover:border-brand-accent transition-all duration-300 reveal">
+                    <div class="w-12 h-12 bg-neutral-50 mb-6 flex items-center justify-center group-hover:bg-brand-accent group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="layout" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-4">Operational Systems Design</h3>
+                    <p class="text-brand-secondary text-sm leading-relaxed">Developing practical tools, frameworks, and processes that improve efficiency and enable teams to execute with confidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20">
+                <div class="reveal">
+                    <span class="text-brand-accent font-semibold tracking-widest uppercase text-xs mb-4 block">Professional History</span>
+                    <h2 class="font-serif text-4xl mb-12">Executive Operations & Program Coordination</h2>
+                    <div class="space-y-8">
+                        <div>
+                            <h4 class="font-bold text-sm uppercase tracking-widest mb-4">Key Responsibilities</h4>
+                            <ul class="space-y-4">
+                                <li class="flex gap-4 text-brand-secondary">
+                                    <span class="text-brand-accent flex-shrink-0">•</span>
+                                    <span>Structuring operational workflows across multi-program environments</span>
+                                </li>
+                                <li class="flex gap-4 text-brand-secondary">
+                                    <span class="text-brand-accent flex-shrink-0">•</span>
+                                    <span>Aligning stakeholders within coordinated execution frameworks</span>
+                                </li>
+                                <li class="flex gap-4 text-brand-secondary">
+                                    <span class="text-brand-accent flex-shrink-0">•</span>
+                                    <span>Ensuring compliance with reporting standards and timelines</span>
+                                </li>
+                                <li class="flex gap-4 text-brand-secondary">
+                                    <span class="text-brand-accent flex-shrink-0">•</span>
+                                    <span>Supporting leadership decision-making through clear operational visibility</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div id="impact">
+                            <h4 class="font-bold text-sm uppercase tracking-widest mb-4">Key Impact</h4>
+                            <div class="p-6 bg-neutral-50 border-l-4 border-brand-accent">
+                                <h5 class="font-bold mb-2">Operational Systems Strengthening</h5>
+                                <p class="text-brand-secondary text-sm">
+                                    Designing, aligning, and sustaining operational systems that enable complex programs to function effectively across multi-country landscapes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reveal">
+                    <div class="bg-brand-primary text-white p-12 relative overflow-hidden h-full">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-brand-accent/20 -mr-16 -mt-16 rounded-full blur-3xl opacity-50"></div>
+                        <h4 class="font-bold text-sm uppercase tracking-widest mb-8 text-brand-accent">Execution Approach</h4>
+                        <div class="space-y-10">
+                            <div>
+                                <h5 class="font-serif text-xl mb-2">Structure in Ambiguity</h5>
+                                <p class="text-white/70 text-sm">Bringing structure to ambiguity in fast-moving environments</p>
+                            </div>
+                            <div>
+                                <h5 class="font-serif text-xl mb-2">Balanced Compliance</h5>
+                                <p class="text-white/70 text-sm">Balancing compliance requirements with practical execution needs</p>
+                            </div>
+                            <div>
+                                <h5 class="font-serif text-xl mb-2">Strategic Accountability</h5>
+                                <p class="text-white/70 text-sm">Designing systems that support accountability and efficiency</p>
+                            </div>
+                            <div>
+                                <h5 class="font-serif text-xl mb-2">Operational Control</h5>
+                                <p class="text-white/70 text-sm">Maintaining operational control while enabling strategic leadership</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ventures" class="py-24 bg-[#f9f9f7]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16 text-center reveal">
+                <span class="text-brand-accent font-semibold tracking-widest uppercase text-xs mb-4 block">Applied Systems Work</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6 text-balance max-w-2xl mx-auto">Ventures Across Multiple Sectors</h2>
+                <p class="text-brand-secondary max-w-xl mx-auto">Translating structured thinking into practical, service-driven solutions across catering, supply, agriculture, and authorship.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white group overflow-hidden border border-neutral-100 hover:shadow-xl transition-all duration-500 flex flex-col md:flex-row reveal">
+                    <div class="w-full md:w-2/5 h-64 md:h-auto overflow-hidden">
+                        <img src="https://tse2.mm.bing.net/th/id/OIP._d-yswPAj26-GGe4QmjbhgHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="p-8 w-full md:w-3/5 flex flex-col justify-between">
+                        <div>
+                            <div class="inline-flex items-center gap-2 text-brand-accent text-xs font-bold uppercase tracking-widest mb-4">
+                                <i data-lucide="utensils-crossed" class="w-4 h-4"></i> Venture
+                            </div>
+                            <h3 class="font-serif text-2xl font-bold mb-4">Pastry & Catering Services</h3>
+                            <p class="text-brand-secondary text-sm leading-relaxed mb-6">Production and supply of quality pastries, alongside tailored catering solutions for events.</p>
+                        </div>
+                        <button class="text-xs uppercase tracking-widest font-bold flex items-center gap-2 group/btn">
+                            Learn More <i data-lucide="arrow-right" class="w-3 h-3 group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white group overflow-hidden border border-neutral-100 hover:shadow-xl transition-all duration-500 flex flex-col md:flex-row reveal">
+                    <div class="w-full md:w-2/5 h-64 md:h-auto overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="p-8 w-full md:w-3/5 flex flex-col justify-between">
+                        <div>
+                            <div class="inline-flex items-center gap-2 text-brand-accent text-xs font-bold uppercase tracking-widest mb-4">
+                                <i data-lucide="book-open" class="w-4 h-4"></i> Venture
+                            </div>
+                            <h3 class="font-serif text-2xl font-bold mb-4">Authorship & Knowledge</h3>
+                            <p class="text-brand-secondary text-sm leading-relaxed mb-6">Published author contributing to education, safety awareness, and capacity building.</p>
+                        </div>
+                        <button class="text-xs uppercase tracking-widest font-bold flex items-center gap-2 group/btn">
+                            Learn More <i data-lucide="arrow-right" class="w-3 h-3 group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-brand-primary text-white overflow-hidden relative">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <span class="text-brand-accent font-semibold tracking-widest uppercase text-xs mb-4 block">Connect</span>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold mb-8">Let's coordinate something exceptional.</h2>
+                    <p class="text-white/70 mb-12 max-w-md">Available for program coordination, operational strategy, and systems design consultations.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-white/10 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="mail" class="w-5 h-5 text-brand-accent"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] uppercase tracking-widest text-white/40 mb-1">Email</p>
+                                <a href="mailto:chincarinewirdzeyii@gmail.com" class="text-lg hover:text-brand-accent transition-colors">chincarinewirdzeyii@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-white/10 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="phone" class="w-5 h-5 text-brand-accent"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] uppercase tracking-widest text-white/40 mb-1">Phone</p>
+                                <a href="tel:+237694827236" class="text-lg hover:text-brand-accent transition-colors">+237 694 827 236</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reveal">
+                    <div class="bg-white p-10 text-brand-primary">
+                        <h3 class="font-serif text-2xl font-bold mb-8 italic">Quick Message</h3>
+                        <form class="space-y-6" onsubmit="event.preventDefault()">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="text-[10px] uppercase font-bold tracking-widest text-neutral-400">Name</label>
+                                    <input type="text" class="w-full border-b border-neutral-200 py-2 focus:border-brand-accent outline-none transition-colors">
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-[10px] uppercase font-bold tracking-widest text-neutral-400">Email</label>
+                                    <input type="email" class="w-full border-b border-neutral-200 py-2 focus:border-brand-accent outline-none transition-colors">
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[10px] uppercase font-bold tracking-widest text-neutral-400">Message</label>
+                                <textarea rows="4" class="w-full border-b border-neutral-200 py-2 focus:border-brand-accent outline-none transition-colors resize-none"></textarea>
+                            </div>
+                            <button class="w-full py-4 bg-brand-primary text-white font-bold uppercase tracking-[0.2em] text-xs hover:bg-brand-accent transition-colors">
+                                Send Consultation Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-24 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-[0.3em] font-bold text-white/40">
+                <p>© 2026 Chin Carine W. All rights reserved.</p>
+                <div class="flex gap-8">
+                    <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+                    <a href="#" class="hover:text-white transition-colors">Twitter</a>
+                    <a href="#" class="hover:text-white transition-colors">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Simple Intersection Observer for Reveal Animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
